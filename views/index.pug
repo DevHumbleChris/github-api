@@ -1,0 +1,58 @@
+extend layout
+
+block content
+    div(class="outer-container")
+        div(class="h2 text-center title-head") GitHub API
+        div(class="form")
+            form(action="/", method="post")
+                div(class="input-group mb-3")
+                    input(type="text" class="form-control" placeholder="Enter GitHub Username" aria-label="GitHub username" aria-describedby="basic-addon2" name="username")
+                    button(type="submit" class="input-group-text" id="basic-addon2")
+                            i(class="fas fa-binoculars")
+        if  code == 200
+            div(class="avatar-div text-center")
+                img(src=`${results[0].owner.avatar_url}` alt="avatar" class="avatar")
+            div(class="card-text text-center username")= results[0].owner.login
+            div(class="no-projects text-center") No. Of Projects: #{results.length}
+            div(class="scrollable-div")
+                each result in results
+                    div(class="card shadow mt-2")
+                        div(class="card-body")
+                            div(class="card-title repo-name")= result.name
+                            p(class="card-text description")= result.description
+                            p(class="card-text")
+                                i(class="fas fa-code")
+                                span(class="lang")  #{result.language}
+                            a(class="btn btn-dark" href=`${result.html_url}`)
+                                i(class="fab fa-github")
+                                span(class="view-source")  View Source
+        else if code == 404
+            div(class="results card shadow")
+                div(class="card-body")
+                    div(class="card-title")= message
+        else
+            div(class="results card shadow")
+                div(class="card-body")
+                    div(class="card-title text-center") 
+                        i(class="fas fa-clipboard-list icon color")
+                        span(class="instructions-title")  How It Works
+                    p(class="card-text") 
+                        i(class="far fa-check-circle icon check")
+                        span(class="instruction")  Enter your GitHub Username 🧑💻.
+                    p(class="card-text") 
+                        i(class="far fa-check-circle icon check")
+                        span(class="instruction")  Click Search / Press Enter 🖱.
+                    p(class="card-text") 
+                        i(class="far fa-check-circle icon check")
+                        span(class="instruction")  Wait For The Results.
+        div(class="footer text-center")
+            div(class="remarks") Made With Love 😘❤💯, @Am.Chris.
+            div(class="icon-pack")
+                a(href="https://www.facebook.com/profile.php?id=100011196098630" class="btn")
+                    i(class="fab fa-facebook-square icon facebook")
+                a(href="https://twitter.com/AmChrisKE" class="btn")
+                    i(class="fab fa-twitter-square icon twitter")
+                a(href="https://www.linkedin.com/in/dev-humble-chris-2870331aa/" class="btn")
+                    i(class="fab fa-linkedin icon linkedin")
+                a(href="https://github.com/DevHumbleChris" class="btn")
+                    i(class="fab fa-github-square icon github")

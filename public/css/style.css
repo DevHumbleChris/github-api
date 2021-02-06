@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Fredoka+One&family=Hanalei&family=Lemonada:wght@300&family=Merienda&family=Merienda+One&family=Potta+One&family=Special+Elite&display=swap');
+
+/* @ Font-Family */
+
+/* -->
+--> font-family: 'Creepster', cursive;
+--> font-family: 'Fredoka One', cursive;
+--> font-family: 'Hanalei', cursive;
+--> font-family: 'Lemonada', cursive;
+--> font-family: 'Merienda', cursive;
+--> font-family: 'Merienda One', cursive;
+--> font-family: 'Potta One', cursive; 
+--> */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FBF8D7;
+}
+
+.outer-container {
+    background: #F5C28F;
+    padding: 20px;
+    width: 30rem;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.icon {
+    font-size: 25px;
+}
+
+.check{
+    color: #41B883;
+}
+.footer{
+    margin-top: 10px;
+    padding: 10px;
+}
+.title-head, .no-projects{
+    font-family: 'Fredoka One', cursive;
+}
+.remarks {
+    font-family: 'Merienda One', cursive;
+}
+.instruction {
+    font-family: 'Merienda', cursive;
+}
+.instructions-title{
+    font-family: 'Lemonada', cursive;
+    color: #A44F45;
+}
+.color{
+    color: #4A314E;
+}
+.results{
+    background: #B28458;
+}
+.scrollable-div{
+    padding: 10px;
+    background: #92514A;
+    overflow-y: auto;
+    width: 27rem;
+    height: 20rem;
+}
+.avatar{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 2px;
+    background: #ffff;
+}
+.username{
+    font-family: 'Potta One', cursive; 
+}
+.repo-name{
+    font-family: 'Merienda One', cursive;
+}
+.description {
+    font-family: 'Merienda', cursive;
+}
+.lang {
+    font-family: 'Fredoka One', cursive;
+}
+.view-source {
+    font-family: 'Merienda', cursive;
+}
+.twitter{
+    color: #1DA1F2;
+}
+.facebook{
+    color: #1877F2;
+}
+.linkedin{
+    color: #0A66C2;
+}
+.github{
+    color: #161B22;
+}
